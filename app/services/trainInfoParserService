@@ -1,0 +1,7 @@
+//Write a method that takes in a list of dicts, goes through them, and se
+export const getTrainsInfoForGivenStationAndLine = async (
+    trainsInfo: { [key: string]: any }[] | null
+    ): Promise<> => {
+    
+    return null;
+};
