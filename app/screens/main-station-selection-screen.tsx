@@ -6,6 +6,7 @@ import axios from 'axios';
 import GeolocationComponent from '../components/GeolocationComponent'; // Adjust the path as necessary
 import { findNearestStation } from '../services/locationService';
 import station_locs from '../../assets/stations_locs.json';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 //State management
 
@@ -68,6 +69,14 @@ const MainStationSelection: React.FC = () => {
     }
   };
 
+  const saveStationToWidget = async (stationName: string, lineName: string) => {
+    try {
+      await AsyncStorage.setItem('widgetStation', JSON.stringify({ stationName, lineName }));
+    } catch (error) {
+      console.error('Error saving station to widget:', error);
+    }
+  };
+
   return (
     <View style={styles.container}>
       <GeolocationComponent onLocationUpdate={handleLocationUpdate} refreshLocation={refreshLocation} />
@@ -88,12 +97,16 @@ const MainStationSelection: React.FC = () => {
             <TouchableOpacity
               key={index}
               style={styles.stationButton}
+              onLongPress={() => {
+                // Save the selected station to storage
+                saveStationToWidget(stationName, lineName);
+                alert(`${stationName} added to widget`);
+              }}
               onPress={() => {
-                 // Assuming line_name is part of the station object
-                console.log(stationName, lineName + " was pressed at the main station screen")
+                console.log(stationName, lineName + " was pressed at the main station screen");
                 router.push({
                   pathname: '/screens/choose-train-screen',
-                  params: { stationName, lineName }, // Pass stationName and lineName as parameters
+                  params: { stationName, lineName },
                 });
               }}
             >

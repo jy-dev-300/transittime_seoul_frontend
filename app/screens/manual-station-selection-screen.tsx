@@ -1,8 +1,18 @@
-import React, {useState} from 'react';
+import React, {useState, useMemo} from 'react';
 import { View, Text, ScrollView, TouchableOpacity, StyleSheet, TextInput, RefreshControl } from 'react-native';
 import Svg, { Rect, Text as SvgText } from 'react-native-svg'; // Import for SVG support
 import { useRouter } from 'expo-router';
 import Autocomplete from 'react-native-autocomplete-input';
+import stationData from '../../assets/allLinesAtEachStation.json';
+
+// Define a type for the station data
+type Station = {
+  outStnNum: string;
+  stnKrNm: string;
+  lineNm: string;
+  convX: string;
+  convY: string;
+};
 
 //State management
 
@@ -13,19 +23,19 @@ import Autocomplete from 'react-native-autocomplete-input';
 //JSX Layout
 //Defines UI Structure
 // Define navigation types
-const initialStations = ["Pungmu Station", "MANUAL 2", "Station 3", "Station 4", "Station 5", "Station 6", "Station 7"];
-// initial stations are list of names in stations_loc
-// then for each name, look in stations_loc then get 
-
 
 const ManualStationSelection: React.FC = () => {
-  const [stations, setStations] = useState(initialStations); // Store stations in state, state of stations is set to initialStations
-  const [searchQuery, setSearchQuery] = useState(''); // For the search query
-  const router = useRouter(); //router.push(rel path to dest screen) relative wrt to 'app'
+  const [searchQuery, setSearchQuery] = useState('');
+  const router = useRouter();
 
-  const filteredStations = stations.filter(station =>
-    station.toLowerCase().includes(searchQuery.toLowerCase())
-  );
+  // Filter stations based on search query
+  const filteredStations = useMemo(() => {
+    if (!searchQuery.trim()) return [];
+    const normalizedQuery = searchQuery.toLowerCase().replace(/\s+/g, '');
+    return stationData.filter((station: Station) => 
+      station.stnKrNm.toLowerCase().replace(/\s+/g, '').includes(normalizedQuery)
+    );
+  }, [searchQuery]);
 
   return (
     <View style={styles.container}>
@@ -38,37 +48,52 @@ const ManualStationSelection: React.FC = () => {
       />
 
       {/* Scrollable List of Stations */}
-      <ScrollView contentContainerStyle={styles.stationList} 
-                  bounces={true} // bouncy/stretchy overscroll on iOS
-                  //stretchy overscroll on Android
-                  overScrollMode='always'
-                  //play with scroll event throttle quantity
-                  scrollEventThrottle={160}> 
-        {stations.map((station, index) => (
-          <TouchableOpacity key={index} style={styles.stationButton} 
-          onPress={() => 
-            
-            router.push('/screens/choose-line-screen')
-
-          }>
+      <ScrollView 
+        contentContainerStyle={styles.stationList}
+        bounces={true}
+        overScrollMode='always'
+        scrollEventThrottle={16}
+      >
+        {filteredStations.map((station: Station, index) => (
+          <TouchableOpacity
+            key={`${station.stnKrNm}-${station.lineNm}-${index}`}
+            style={styles.stationButton}
+            onPress={() => {
+              console.log(`${station.stnKrNm}, ${station.lineNm} was pressed.`);
+              router.push({
+                pathname: '/screens/choose-train-screen',
+                params: { stationName: station.stnKrNm, lineName: station.lineNm },
+              });
+            }}
+          >
             <Svg width="100%" height="100" viewBox="0 0 412 100" fill="none">
               <Rect width="100%" height="100%" fill="#e0e0e0" />
               <SvgText
                 fill="#000000"
                 fontSize="24"
                 x="50%"
-                y="50%"
+                y="40%"
                 textAnchor="middle"
                 alignmentBaseline="middle"
+                fontWeight="bold"
               >
-                {station}
+                {station.stnKrNm}
+              </SvgText>
+              <SvgText
+                fill="#FF5733"
+                fontSize="18"
+                x="50%"
+                y="65%"
+                textAnchor="middle"
+                alignmentBaseline="middle"
+                fontStyle="italic"
+              >
+                {station.lineNm}
               </SvgText>
             </Svg>
           </TouchableOpacity>
         ))}
       </ScrollView>
-
-      
     </View>
   );
 };

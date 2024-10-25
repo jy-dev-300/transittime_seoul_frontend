@@ -8,6 +8,9 @@
       "expo-router"
     ],
     "name": "frontend",
-    "slug": "frontend"
+    "slug": "frontend",
+    "android": {
+      "package": "com.MobilityHub.TransitTime_NYC"
+    }
   }
 }
