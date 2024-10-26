@@ -19,6 +19,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import android.content.ComponentName;
 import com.MobilityHub.TransitTime_NYC.utility.NetworkUtils;
+import com.MobilityHub.TransitTime_NYC.utility.TrainLogoUtils;
 
 
 public class List extends AppWidgetProvider {
@@ -120,26 +121,35 @@ public class List extends AppWidgetProvider {
 
         @Override
         protected void onPostExecute(JSONArray trainTimes) {
-            String allTrainsString = "";
+            String trainDirectionAndType = "";
+            String timeRemainingForTrain = "";
             if (trainTimes != null) {
                 try {
                     Log.d(TAG, "This is ultimately data that can be brought to widget UI: " + trainTimes.toString());
                     JSONObject train = trainTimes.getJSONObject(0);
                     views.setTextViewText(R.id.widget_station_name, train.getString("stationName"));
 
+                    // Conditional logo display for line name
+                    String lineName = train.getString("lineName");
+                    int trainLogo = TrainLogoUtils.getLogoResourceId(lineName);
+                    if (trainLogo != -1) {
+                        views.setImageViewResource(R.id.widget_line_name, trainLogo);
+                    } else {
+                        views.setTextViewText(R.id.widget_line_name, lineName);
+                    }
+                    
+
                     for (int i = 0; i < trainTimes.length(); i++) {
                         JSONObject currentTrain = trainTimes.getJSONObject(i);
-                        allTrainsString += currentTrain.getString("direction") + "\n";
-                        allTrainsString += currentTrain.getString("typeOfTrain") + "\n";
-                        allTrainsString += currentTrain.getString("arrivalTime") + "\n";
-
-                        // Conditional logo display for line name
-                        String lineNumber = currentTrain.getString("lineNumber");
-                        int trainLogo = TrainLogoUtils.getLogoResourceId(lineNumber);
-                        views.setImageViewResource(R.id.widget_line_name, trainLogo);
+                        trainDirectionAndType += currentTrain.getString("direction") + " ";
+                        trainDirectionAndType += "(" + currentTrain.getString("typeOfTrain") + ")" + '\n';
+                        timeRemainingForTrain += currentTrain.getString("arrivalTime");
 
                         Log.d(TAG, "Updated widget views with train times");
-                } catch (Exception e) {
+                    }
+                    views.setTextViewText(R.id.train_direction_and_type, trainDirectionAndType);
+                    views.setTextViewText(R.id.time_remaining_for_train, timeRemainingForTrain);
+                }catch (Exception e) {
                     Log.e(TAG, "Error updating widget views", e);
                 }
                 appWidgetManager.updateAppWidget(appWidgetId, views);

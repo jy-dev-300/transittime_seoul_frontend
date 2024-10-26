@@ -9,27 +9,45 @@
         android:id="@+id/widget_station_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Station Name"
+        android:text="Loading..."
         android:textSize="16sp"
-        android:textColor="#000" />
+        android:textColor="#000"
+        android:layout_gravity="center_horizontal" />
 
-    <TextView
+    <ImageView
         android:id="@+id/widget_line_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Line Name"
-        android:textSize="14sp"
-        android:textColor="#555" />
-    
-    <TextView 
-        android:id="@+id/all_train_times"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="All Train Times"
-        android:textSize="14sp"
-        android:textColor="#555"
-    />
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/line_1_logo"
+        android:layout_gravity="center_horizontal" />
 
-    <!-- Add more TextViews for additional train details -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/train_direction_and_type"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Loading..."
+            android:textSize="16sp"
+            android:lineHeight="20sp"
+            android:textColor="#000"
+            android:gravity="start" />
+
+        <TextView
+            android:id="@+id/time_remaining_for_train"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Loading..."
+            android:textSize="16sp"
+            android:lineHeight="20sp"
+            android:textColor="#000"
+            android:gravity="end" />
+    </LinearLayout>
 
 </LinearLayout>
+
+<!-- replace the default line_1_logo with a loading icon for better UX while widget loads -->

@@ -2,9 +2,9 @@ package com.MobilityHub.TransitTime_NYC.utility;
 
 import com.MobilityHub.TransitTime_NYC.R;
 
-public class LineLogoUtils {
-
+public class TrainLogoUtils {
     public static int getLogoResourceId(String lineNumber) {
+        int logoResId;
         switch (lineNumber) {
                             case "1호선":
                                 logoResId = R.drawable.line_1_logo;
@@ -34,9 +34,10 @@ public class LineLogoUtils {
                                 logoResId = R.drawable.line_9_logo;
                                 break;
                             default:
-                                logoResId = lineNumber;
+                                logoResId = -1;
                                 break;
-                        }
+        }
+        return logoResId;
                         
-                    }
+    }
 }

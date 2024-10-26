@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/line_name_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/line_1_logo" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingStart="8dp">
+
+        <TextView
+            android:id="@+id/station_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Station Name"
+            android:textSize="16sp"
+            android:textColor="#000" />
+
+        <TextView
+            android:id="@+id/train_direction_and_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Direction Type"
+            android:textSize="14sp"
+            android:textColor="#666" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/time_remaining_for_train"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5"
+        android:textSize="16sp"
+        android:textColor="#000"
+        android:gravity="end" />
+</LinearLayout>
+
