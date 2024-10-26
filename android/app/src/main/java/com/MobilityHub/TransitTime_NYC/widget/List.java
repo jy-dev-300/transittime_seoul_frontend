@@ -17,6 +17,9 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import android.content.ComponentName;
+import com.MobilityHub.TransitTime_NYC.utility.NetworkUtils;
+
 
 public class List extends AppWidgetProvider {
 
@@ -24,6 +27,7 @@ public class List extends AppWidgetProvider {
 
     @Override
     public void onEnabled(Context context) {
+        super.onEnabled(context);
         Log.d(TAG, "Widget enabled");
     }
 
@@ -32,9 +36,11 @@ public class List extends AppWidgetProvider {
         Log.d(TAG, "onUpdate called");
         for (int appWidgetId : appWidgetIds) {
             RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.widget_list);
+            Log.d(TAG, "RemoteViews created");
 
-            // Fetch the station details from storage
+            // Fetch the station details from SharedPreferences
             String stationDetails = getStationFromStorage(context);
+            Log.d(TAG, "stationDetails from getStationFromStorage in List.java: " + stationDetails);
             if (stationDetails != null) {
                 Log.d(TAG, "Station details found: " + stationDetails);
                 // Fetch train times from API
@@ -49,18 +55,38 @@ public class List extends AppWidgetProvider {
     public void onReceive(Context context, Intent intent) {
         super.onReceive(context, intent);
         Log.d(TAG, "onReceive called with action: " + intent.getAction());
+        Log.d(TAG, "Expected action: " + AppWidgetManager.ACTION_APPWIDGET_UPDATE + "and intent.getAction() is: " + intent.getAction());
+        // if (AppWidgetManager.ACTION_APPWIDGET_UPDATE.equals(intent.getAction())) {
+        //     AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(context);
+        //     ComponentName thisAppWidget = new ComponentName(context.getPackageName(), List.class.getName());
+        //     int[] appWidgetIds = appWidgetManager.getAppWidgetIds(thisAppWidget);
+        //     onUpdate(context, appWidgetManager, appWidgetIds);
+        // }
     }
 
     @Override
     public void onDisabled(Context context) {
+        super.onDisabled(context);
         Log.d(TAG, "Widget disabled");
     }
 
     private String getStationFromStorage(Context context) {
         SharedPreferences prefs = context.getSharedPreferences("widgetPrefs", Context.MODE_PRIVATE);
-        String stationDetails = prefs.getString("widgetStation", null);
-        Log.d(TAG, "Retrieved station details from storage: " + stationDetails);
-        return stationDetails;
+        Log.d(TAG, "Retrieved shared preferences: " + prefs);
+        String stationName = prefs.getString("stationName", null);
+        String lineName = prefs.getString("lineName", null);
+        Log.d(TAG, "Retrieved station details from storage: " + stationName + " " + lineName);
+        if (stationName != null && lineName != null) {
+        JSONObject stationDetails = new JSONObject(); //this JSON object is used to pass the station name and line name to the FetchTrainTimesTask
+        try {
+            stationDetails.put("stationName", stationName);
+            stationDetails.put("lineName", lineName);
+        } catch (Exception e) {
+            Log.e(TAG, "Error retrieving station details from storage (storage is SharedPreferencesModule.java)", e);
+        }
+        return stationDetails.toString();
+    }
+    return null;
     }
 
     private static class FetchTrainTimesTask extends AsyncTask<String, Void, JSONArray> {
@@ -84,22 +110,8 @@ public class List extends AppWidgetProvider {
                 String stationName = stationJson.getString("stationName");
                 String lineName = stationJson.getString("lineName");
                 String backendURL = BuildConfig.BACKEND_URL;
-                URL url = new URL(backendURL + stationName + "&lineName=" + lineName);
-                Log.d(TAG, "Fetching train times from URL: " + url.toString());
-                HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
-                try {
-                    BufferedReader in = new BufferedReader(new InputStreamReader(urlConnection.getInputStream()));
-                    StringBuilder response = new StringBuilder();
-                    String inputLine;
-                    while ((inputLine = in.readLine()) != null) {
-                        response.append(inputLine);
-                    }
-                    in.close();
-                    Log.d(TAG, "Received response: " + response.toString());
-                    return new JSONArray(response.toString());
-                } finally {
-                    urlConnection.disconnect();
-                }
+                JSONArray response = NetworkUtils.fetchArrivalTimes( stationName,  lineName,  backendURL);
+                return response;
             } catch (Exception e) {
                 Log.e(TAG, "Error fetching train times", e);
                 return null;
@@ -108,12 +120,25 @@ public class List extends AppWidgetProvider {
 
         @Override
         protected void onPostExecute(JSONArray trainTimes) {
+            String allTrainsString = "";
             if (trainTimes != null) {
                 try {
-                    JSONObject firstTrain = trainTimes.getJSONObject(0);
-                    views.setTextViewText(R.id.widget_station_name, firstTrain.getString("stationName"));
-                    views.setTextViewText(R.id.widget_line_name, firstTrain.getString("lineName"));
-                    Log.d(TAG, "Updated widget views with train times");
+                    Log.d(TAG, "This is ultimately data that can be brought to widget UI: " + trainTimes.toString());
+                    JSONObject train = trainTimes.getJSONObject(0);
+                    views.setTextViewText(R.id.widget_station_name, train.getString("stationName"));
+
+                    for (int i = 0; i < trainTimes.length(); i++) {
+                        JSONObject currentTrain = trainTimes.getJSONObject(i);
+                        allTrainsString += currentTrain.getString("direction") + "\n";
+                        allTrainsString += currentTrain.getString("typeOfTrain") + "\n";
+                        allTrainsString += currentTrain.getString("arrivalTime") + "\n";
+
+                        // Conditional logo display for line name
+                        String lineNumber = currentTrain.getString("lineNumber");
+                        int trainLogo = TrainLogoUtils.getLogoResourceId(lineNumber);
+                        views.setImageViewResource(R.id.widget_line_name, trainLogo);
+
+                        Log.d(TAG, "Updated widget views with train times");
                 } catch (Exception e) {
                     Log.e(TAG, "Error updating widget views", e);
                 }

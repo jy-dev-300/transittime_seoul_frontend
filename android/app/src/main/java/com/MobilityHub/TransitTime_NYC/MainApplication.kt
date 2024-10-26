@@ -11,7 +11,8 @@ import com.facebook.react.ReactHost
 import com.facebook.react.defaults.DefaultNewArchitectureEntryPoint.load
 import com.facebook.react.defaults.DefaultReactNativeHost
 import com.facebook.soloader.SoLoader
-
+import com.MobilityHub.TransitTime_NYC.WidgetUpdaterPackage
+import com.MobilityHub.TransitTime_NYC.SharedPreferencesPackage
 import expo.modules.ApplicationLifecycleDispatcher
 import expo.modules.ReactNativeHostWrapper
 
@@ -21,9 +22,10 @@ class MainApplication : Application(), ReactApplication {
         this,
         object : DefaultReactNativeHost(this) {
           override fun getPackages(): List<ReactPackage> {
-            // Packages that cannot be autolinked yet can be added manually here, for example:
-            // packages.add(new MyReactNativePackage());
-            return PackageList(this).packages
+            return PackageList(this).packages.apply {
+              add(WidgetUpdaterPackage())
+              add(SharedPreferencesPackage())
+            }
           }
 
           override fun getJSMainModuleName(): String = ".expo/.virtual-metro-entry"

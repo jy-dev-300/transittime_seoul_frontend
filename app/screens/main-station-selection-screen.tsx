@@ -6,7 +6,10 @@ import axios from 'axios';
 import GeolocationComponent from '../components/GeolocationComponent'; // Adjust the path as necessary
 import { findNearestStation } from '../services/locationService';
 import station_locs from '../../assets/stations_locs.json';
-import AsyncStorage from '@react-native-async-storage/async-storage';
+import { NativeModules } from 'react-native';
+
+const { SharedPreferencesModule } = NativeModules;
+const { WidgetUpdater } = NativeModules;
 
 //State management
 
@@ -71,7 +74,8 @@ const MainStationSelection: React.FC = () => {
 
   const saveStationToWidget = async (stationName: string, lineName: string) => {
     try {
-      await AsyncStorage.setItem('widgetStation', JSON.stringify({ stationName, lineName }));
+      SharedPreferencesModule.saveStation(stationName, lineName);
+      WidgetUpdater.updateWidget(); // Trigger widget update
     } catch (error) {
       console.error('Error saving station to widget:', error);
     }
