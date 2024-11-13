@@ -1,4 +1,4 @@
-package com.MobilityHub.TransitTime_NYC;
+package com.MobilityHub.TransitTime_Seoul;
 import android.content.Context;
 import android.content.SharedPreferences;
 import com.facebook.react.bridge.ReactApplicationContext;

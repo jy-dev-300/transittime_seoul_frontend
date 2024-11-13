@@ -1,16 +1,16 @@
 import React, {useEffect, useState} from 'react';
-import { View, Text, ScrollView, TouchableOpacity, StyleSheet, RefreshControl } from 'react-native';
+import { View, Text, ScrollView, TouchableOpacity, StyleSheet, RefreshControl, Alert } from 'react-native';
 import Svg, { Rect, Text as SvgText } from 'react-native-svg'; // Import for SVG support
 import { useRouter } from 'expo-router';
 import axios from 'axios';
 import GeolocationComponent from '../components/GeolocationComponent'; // Adjust the path as necessary
 import { findNearestStation } from '../services/locationService';
 import station_locs from '../../assets/stations_locs.json';
-import { NativeModules } from 'react-native';
-
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { NativeModules } from 'react-native'; // Import NativeModules
+const { WidgetUpdater } = NativeModules; // Access the WidgetUpdater module
+import { getLogoResource } from '../services/trainLogosService'; // Adjust the path as necessary
 const { SharedPreferencesModule } = NativeModules;
-const { WidgetUpdater } = NativeModules;
-
 //State management
 
 //Screen component definition
@@ -75,10 +75,32 @@ const MainStationSelection: React.FC = () => {
   const saveStationToWidget = async (stationName: string, lineName: string) => {
     try {
       SharedPreferencesModule.saveStation(stationName, lineName);
+      console.log('Station saved to SharedPreferences');
       WidgetUpdater.updateWidget(); // Trigger widget update
     } catch (error) {
       console.error('Error saving station to widget:', error);
     }
+  };
+
+  const handleLongPress = (stationName: string, lineName: string) => {
+    Alert.alert(
+      "Add to Widget",
+      `Do you want to add ${stationName} to the widget?`,
+      [
+        {
+          text: "Cancel",
+          style: "cancel",
+        },
+        {
+          text: "OK",
+          onPress: () => {
+            saveStationToWidget(stationName, lineName);
+            alert(`${stationName} added to widget`);
+          },
+        },
+      ],
+      { cancelable: true }
+    );
   };
 
   return (
@@ -94,18 +116,15 @@ const MainStationSelection: React.FC = () => {
         scrollEventThrottle={16}
       >
         {stations.map((station, index) => {
-          // Assuming station_name is formatted as "StationName (LineName)"
           const [stationName, lineName] = station.station_name.split('++++');
+          const LineIcon = getLogoResource(lineName);
+          const distance = station.distance.toFixed(2); // Format distance to two decimal places
 
           return (
             <TouchableOpacity
               key={index}
               style={styles.stationButton}
-              onLongPress={() => {
-                // Save the selected station to storage
-                saveStationToWidget(stationName, lineName);
-                alert(`${stationName} added to widget`);
-              }}
+              onLongPress={() => handleLongPress(stationName, lineName)}
               onPress={() => {
                 console.log(stationName, lineName + " was pressed at the main station screen");
                 router.push({
@@ -114,35 +133,19 @@ const MainStationSelection: React.FC = () => {
                 });
               }}
             >
-              <Svg width="100%" height="100" viewBox="0 0 412 100" fill="none">
-                <Rect width="100%" height="100%" fill="#e0e0e0" />
-
-                {/* Station Name */}
-                <SvgText
-                  fill="#000000"
-                  fontSize="24"
-                  x="50%"
-                  y="40%" // Adjusted y-position for station name
-                  textAnchor="middle"
-                  alignmentBaseline="middle"
-                  fontWeight="bold"
-                >
-                  {stationName}
-                </SvgText>
-
-                {/* Line Name */}
-                <SvgText
-                  fill="#FF5733" // Different color for line name
-                  fontSize="18" // Smaller font size for line name
-                  x="50%"
-                  y="65%" // Adjusted y-position for line name
-                  textAnchor="middle"
-                  alignmentBaseline="middle"
-                  fontStyle="italic"
-                >
-                  {lineName}
-                </SvgText>
-              </Svg>
+              <View style={styles.horizontalContainer}>
+                {LineIcon && (
+                  <View style={{ justifyContent: 'center', alignItems: 'center', width: 24, height: 24, marginLeft: 20 }}>
+                    <LineIcon />
+                  </View>
+                )}
+                <View style={styles.textContainer}>
+                  <Text style={styles.stationName}>{stationName}</Text>
+                </View>
+                <View style={styles.distanceContainer}>
+                  <Text style={styles.stationDistance}>{distance} km</Text>
+                </View>
+              </View>
             </TouchableOpacity>
           );
         })}
@@ -153,19 +156,7 @@ const MainStationSelection: React.FC = () => {
         style={styles.manualButton}
         onPress={() => router.push('/screens/manual-station-selection-screen')}
       >
-        <Svg width="100%" height="100" viewBox="0 0 412 100" fill="none">
-          <Rect width="100%" height="100%" fill="#d3d3d3" />
-          <SvgText
-            fill="#000000"
-            fontSize="24"
-            x="50%"
-            y="50%"
-            textAnchor="middle"
-            alignmentBaseline="middle"
-          >
-            Manually Choose a Station
-          </SvgText>
-        </Svg>
+        <Text style={styles.manualButtonText}>🔍검색</Text>
       </TouchableOpacity>
     </View>
   );
@@ -184,14 +175,48 @@ const styles = StyleSheet.create({
   stationButton: {
     marginBottom: 20,
     width: '100%',
-    height: 100,
+    height: 80, // Adjust the height as needed
+    flexDirection: 'row',
+    alignItems: 'center', // Center children vertically
+    borderWidth: 1,
+    borderColor: '#d3d3d3',
+    borderRadius: 5,
+    paddingHorizontal: 10,
+  },
+  horizontalContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    flex: 1, // Ensure the container takes full width
+  },
+  textContainer: {
+    marginLeft: 20,
+    flex: 1, // Allow text to take available space
+    justifyContent: 'center', // Center text vertically within its container
+  },
+  distanceContainer: {
+    justifyContent: 'center', // Center the distance text vertically
+    alignItems: 'flex-end', // Align the distance text to the right
+  },
+  stationName: {
+    fontSize: 22,
+    textAlign: 'center', // Center text horizontally within the text container
+    color: '#333333',
+  },
+  stationDistance: {
+    fontSize: 16,
+    color: '#555',
+    marginRight: 20,
   },
   manualButton: {
-    width: '100%',
-    height: 100,
-    backgroundColor: '#d3d3d3',
-    justifyContent: 'center',
-    alignItems: 'center',
+    position: 'absolute',
+    alignSelf: 'flex-end',
+    top: 35, // Adjust this value to move the button up
+    right: 20,
+    paddingHorizontal: 10,
+  },
+  manualButtonText: {
+    fontSize: 18,
+    color: '#333333',
   },
 });
 

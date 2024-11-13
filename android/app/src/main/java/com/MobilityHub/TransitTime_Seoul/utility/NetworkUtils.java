@@ -1,4 +1,4 @@
-package com.MobilityHub.TransitTime_NYC.utility;
+package com.MobilityHub.TransitTime_Seoul.utility;
 
 import android.util.Log;
 import org.json.JSONArray;

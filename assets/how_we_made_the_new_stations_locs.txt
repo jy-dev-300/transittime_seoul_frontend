@@ -1,0 +1,11 @@
+we took the old stations_locs, got the station ids matched it to a
+csv we got from seoul metro which is dgmgassets folder (allstationswenglishnames) locally 
+which also had these ids with CORRECT lines, 
+and updated the lines in station_locs w these correct linesbecause
+some of the lines in incorrect_old_station locs were the wrong ones, 
+esp. 경부선 instead of 1호선 etc.
+
+we did this so that we can call the api and get the correct train info because
+stations_locs.json wasnt fitted with the correct lines.
+
+so we had to correct these lines in incorrect_old_stations_locs.json

@@ -45,13 +45,13 @@ const GeolocationComponent: React.FC<GeolocationComponentProps> = ({ onLocationU
   };
 
   return (
-    <View style={{ padding: 20 }}>
+    <View style={{ padding: 15}}>
       {loading ? (
-        <Text>Fetching location...</Text>
+        <Text style={{ fontSize: 18, color: '#333333' }}>위치 찾는중이에요...</Text>
       ) : error ? (
         <Text style={{ color: 'red' }}>Error: {error}</Text>
       ) : (
-        <Text>Location fetched successfully.</Text>
+        <Text style={{ fontSize: 18, color: '#333333' }}>근처 역👇</Text>
       )}
     </View>
   );

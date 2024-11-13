@@ -79,7 +79,7 @@
 	{
 		"outStnNum":"4612",
 		"stnKrNm":"곤제",
-		"lineNm":"의정부경전철",
+		"lineNm":"의정부선",
 		"convX":"127.083715",
 		"convY":"37.750471"
 	},
@@ -93,7 +93,7 @@
 	{
 		"outStnNum":"4607",
 		"stnKrNm":"의정부중앙",
-		"lineNm":"의정부경전철",
+		"lineNm":"의정부선",
 		"convX":"127.049565",
 		"convY":"37.743676"
 	},
@@ -114,28 +114,28 @@
 	{
 		"outStnNum":"4515",
 		"stnKrNm":"둔전",
-		"lineNm":"용인경전철",
+		"lineNm":"에버라인 선",
 		"convX":"127.21364",
 		"convY":"37.267051"
 	},
 	{
 		"outStnNum":"4511",
 		"stnKrNm":"김량장",
-		"lineNm":"용인경전철",
+		"lineNm":"에버라인선",
 		"convX":"127.198781",
 		"convY":"37.237247"
 	},
 	{
 		"outStnNum":"4506",
 		"stnKrNm":"초당",
-		"lineNm":"용인경전철",
+		"lineNm":"에버라인선",
 		"convX":"127.159443",
 		"convY":"37.260752"
 	},
 	{
 		"outStnNum":"4502",
 		"stnKrNm":"강남대",
-		"lineNm":"용인경전철",
+		"lineNm":"에버라인선",
 		"convX":"127.126033",
 		"convY":"37.270161"
 	},
@@ -219,14 +219,14 @@
 	{
 		"outStnNum":"1889",
 		"stnKrNm":"숭의",
-		"lineNm":"수의분당선",
+		"lineNm":"수인선",
 		"convX":"126.638297",
 		"convY":"37.460789"
 	},
 	{
 		"outStnNum":"1405",
 		"stnKrNm":"배방",
-		"lineNm":"1호선",
+		"lineNm":"장항선",
 		"convX":"127.052991",
 		"convY":"36.777629"
 	},
@@ -240,7 +240,7 @@
 	{
 		"outStnNum":"1883",
 		"stnKrNm":"남동인더스파크",
-		"lineNm":"수의분당선",
+		"lineNm":"수인선",
 		"convX":"126.695216",
 		"convY":"37.407722"
 	},
@@ -254,21 +254,21 @@
 	{
 		"outStnNum":"1914",
 		"stnKrNm":"보산",
-		"lineNm":"1호선",
+		"lineNm":"경원선",
 		"convX":"127.057277",
 		"convY":"37.913702"
 	},
 	{
 		"outStnNum":"1910",
 		"stnKrNm":"덕계",
-		"lineNm":"1호선",
+		"lineNm":"경원선",
 		"convX":"127.056486",
 		"convY":"37.818486"
 	},
 	{
 		"outStnNum":"1749",
 		"stnKrNm":"서동탄",
-		"lineNm":"1호선",
+		"lineNm":"경부선",
 		"convX":"127.051672",
 		"convY":"37.195504"
 	},
@@ -296,7 +296,7 @@
 	{
 		"outStnNum":"1220",
 		"stnKrNm":"지평",
-		"lineNm":"경의중앙선",
+		"lineNm":"중앙선",
 		"convX":"127.629874",
 		"convY":"37.476393"
 	},
@@ -310,28 +310,28 @@
 	{
 		"outStnNum":"1213",
 		"stnKrNm":"신원",
-		"lineNm":"경의중앙선",
+		"lineNm":"중앙선",
 		"convX":"127.372921",
 		"convY":"37.525545"
 	},
 	{
 		"outStnNum":"1209",
 		"stnKrNm":"도심",
-		"lineNm":"경의중앙선",
+		"lineNm":"중앙선",
 		"convX":"127.222672",
 		"convY":"37.579622"
 	},
 	{
 		"outStnNum":"1206",
 		"stnKrNm":"도농",
-		"lineNm":"경의중앙선",
+		"lineNm":"중앙선",
 		"convX":"127.161153",
 		"convY":"37.608806"
 	},
 	{
 		"outStnNum":"1203",
 		"stnKrNm":"망우",
-		"lineNm":"경의중앙선",
+		"lineNm":"중앙선",
 		"convX":"127.091909",
 		"convY":"37.59955"
 	},
@@ -583,7 +583,7 @@
 	{
 		"outStnNum":"0233",
 		"stnKrNm":"대림",
-		"lineNm":"2호선",
+		"lineNm":"2 호선",
 		"convX":"126.894932",
 		"convY":"37.493243"
 	},
@@ -933,84 +933,84 @@
 	{
 		"outStnNum":"4615",
 		"stnKrNm":"탑석",
-		"lineNm":"의정부경전철",
+		"lineNm":"의정부선",
 		"convX":"127.088704",
 		"convY":"37.733579"
 	},
 	{
 		"outStnNum":"4614",
 		"stnKrNm":"송산",
-		"lineNm":"의정부경전철",
+		"lineNm":"의정부선",
 		"convX":"127.087159",
 		"convY":"37.737279"
 	},
 	{
 		"outStnNum":"4613",
 		"stnKrNm":"어룡",
-		"lineNm":"의정부경전철",
+		"lineNm":"의정부선",
 		"convX":"127.085035",
 		"convY":"37.742802"
 	},
 	{
 		"outStnNum":"4611",
 		"stnKrNm":"효자",
-		"lineNm":"의정부경전철",
+		"lineNm":"의정부선",
 		"convX":"127.076902",
 		"convY":"37.754025"
 	},
 	{
 		"outStnNum":"4610",
 		"stnKrNm":"경기도청북부청사",
-		"lineNm":"의정부경전철",
+		"lineNm":"의정부선",
 		"convX":"127.071495",
 		"convY":"37.75059"
 	},
 	{
 		"outStnNum":"4609",
 		"stnKrNm":"새말",
-		"lineNm":"의정부경전철",
+		"lineNm":"의정부선",
 		"convX":"127.06362",
 		"convY":"37.748885"
 	},
 	{
 		"outStnNum":"4608",
 		"stnKrNm":"동오",
-		"lineNm":"의정부경전철",
+		"lineNm":"의정부선",
 		"convX":"127.056947",
 		"convY":"37.745271"
 	},
 	{
 		"outStnNum":"4606",
 		"stnKrNm":"흥선",
-		"lineNm":"의정부경전철",
+		"lineNm":"의정부선",
 		"convX":"127.037023",
 		"convY":"37.743302"
 	},
 	{
 		"outStnNum":"4605",
 		"stnKrNm":"의정부시청",
-		"lineNm":"의정부경전철",
+		"lineNm":"의정부선",
 		"convX":"127.034781",
 		"convY":"37.739256"
 	},
 	{
 		"outStnNum":"4603",
 		"stnKrNm":"범골",
-		"lineNm":"의정부경전철",
+		"lineNm":"의정부선",
 		"convX":"127.04353",
 		"convY":"37.728755"
 	},
 	{
 		"outStnNum":"4602",
 		"stnKrNm":"회룡",
-		"lineNm":"의정부경전철",
+		"lineNm":"의정부선",
 		"convX":"127.047073",
 		"convY":"37.725006"
 	},
 	{
 		"outStnNum":"4601",
 		"stnKrNm":"발곡",
-		"lineNm":"의정부경전철",
+		"lineNm":"의정부선",
 		"convX":"127.052803",
 		"convY":"37.727048"
 	},
@@ -1024,21 +1024,21 @@
 	{
 		"outStnNum":"4517",
 		"stnKrNm":"전대.에버랜드",
-		"lineNm":"용인경전철",
+		"lineNm":"에버라인선",
 		"convX":"127.219561",
 		"convY":"37.285342"
 	},
 	{
 		"outStnNum":"4514",
 		"stnKrNm":"보평",
-		"lineNm":"용인경전철",
+		"lineNm":"에버라인선",
 		"convX":"127.218457",
 		"convY":"37.258965"
 	},
 	{
 		"outStnNum":"4513",
 		"stnKrNm":"고진",
-		"lineNm":"용인경전철",
+		"lineNm":"에버라인선",
 		"convX":"127.214251",
 		"convY":"37.24484"
 	},
@@ -1066,14 +1066,14 @@
 	{
 		"outStnNum":"4505",
 		"stnKrNm":"동백",
-		"lineNm":"용인경전철",
+		"lineNm":"에버 라인선",
 		"convX":"127.152716",
 		"convY":"37.269043"
 	},
 	{
 		"outStnNum":"4503",
 		"stnKrNm":"지석",
-		"lineNm":"용인경전철",
+		"lineNm":"에버라인선",
 		"convX":"127.136515",
 		"convY":"37.269606"
 	},
@@ -1108,7 +1108,7 @@
 	{
 		"outStnNum":"1948",
 		"stnKrNm":"원흥",
-		"lineNm":"3호선",
+		"lineNm":"일산선",
 		"convX":"126.872642",
 		"convY":"37.650658"
 	},
@@ -1241,7 +1241,7 @@
 	{
 		"outStnNum":"1891",
 		"stnKrNm":"인천",
-		"lineNm":"수의분당선",
+		"lineNm":"수인선",
 		"convX":"126.617326",
 		"convY":"37.476403"
 	},
@@ -1262,105 +1262,105 @@
 	{
 		"outStnNum":"1890",
 		"stnKrNm":"신포",
-		"lineNm":"수의분당선",
+		"lineNm":"수인선",
 		"convX":"126.623853",
 		"convY":"37.46874"
 	},
 	{
 		"outStnNum":"1407",
 		"stnKrNm":"온양온천",
-		"lineNm":"1호선",
+		"lineNm":"장항선",
 		"convX":"127.003249",
 		"convY":"36.780483"
 	},
 	{
 		"outStnNum":"1403",
 		"stnKrNm":"아산",
-		"lineNm":"1호선",
+		"lineNm":"장항선",
 		"convX":"127.104361",
 		"convY":"36.792053"
 	},
 	{
 		"outStnNum":"1402",
 		"stnKrNm":"쌍용",
-		"lineNm":"1호선",
+		"lineNm":"장항선",
 		"convX":"127.1214",
 		"convY":"36.793759"
 	},
 	{
 		"outStnNum":"1888",
 		"stnKrNm":"인하대",
-		"lineNm":"수의분당선",
+		"lineNm":"수인선",
 		"convX":"126.649619",
 		"convY":"37.448493"
 	},
 	{
 		"outStnNum":"1886",
 		"stnKrNm":"송도",
-		"lineNm":"수의분당선",
+		"lineNm":"수인선",
 		"convX":"126.657772",
 		"convY":"37.428514"
 	},
 	{
 		"outStnNum":"1884",
 		"stnKrNm":"원인재",
-		"lineNm":"수의분당선",
+		"lineNm":"수인선",
 		"convX":"126.686648",
 		"convY":"37.413049"
 	},
 	{
 		"outStnNum":"1881",
 		"stnKrNm":"인천논현",
-		"lineNm":"수의분당선",
+		"lineNm":"수인선",
 		"convX":"126.722478",
 		"convY":"37.400614"
 	},
 	{
 		"outStnNum":"1880",
 		"stnKrNm":"소래포구",
-		"lineNm":"수의분당선",
+		"lineNm":"수인선",
 		"convX":"126.733522",
 		"convY":"37.40095"
 	},
 	{
 		"outStnNum":"1879",
 		"stnKrNm":"월곶",
-		"lineNm":"수의분당선",
+		"lineNm":"수인선",
 		"convX":"126.742699",
 		"convY":"37.391769"
 	},
 	{
 		"outStnNum":"1916",
 		"stnKrNm":"소요산",
-		"lineNm":"1호선",
+		"lineNm":"경 원선",
 		"convX":"127.061034",
 		"convY":"37.9481"
 	},
 	{
 		"outStnNum":"1915",
 		"stnKrNm":"동두천",
-		"lineNm":"1호선",
+		"lineNm":"경원선",
 		"convX":"127.05479",
 		"convY":"37.927878"
 	},
 	{
 		"outStnNum":"1912",
 		"stnKrNm":"지행",
-		"lineNm":"1호선",
+		"lineNm":"경원선",
 		"convX":"127.055716",
 		"convY":"37.892334"
 	},
 	{
 		"outStnNum":"1911",
 		"stnKrNm":"덕정",
-		"lineNm":"1호선",
+		"lineNm":"경원선",
 		"convX":"127.061277",
 		"convY":"37.843188"
 	},
 	{
 		"outStnNum":"1908",
 		"stnKrNm":"녹양",
-		"lineNm":"1호선",
+		"lineNm":"경원선",
 		"convX":"127.042292",
 		"convY":"37.75938"
 	},
@@ -1374,7 +1374,7 @@
 	{
 		"outStnNum":"1878",
 		"stnKrNm":"달월",
-		"lineNm":"수의분당선",
+		"lineNm":"수인선",
 		"convX":"126.745177",
 		"convY":"37.379681"
 	},
@@ -1423,49 +1423,49 @@
 	{
 		"outStnNum":"1219",
 		"stnKrNm":"용문",
-		"lineNm":"경의중앙선",
+		"lineNm":"중앙선",
 		"convX":"127.594647",
 		"convY":"37.48223"
 	},
 	{
 		"outStnNum":"1218",
 		"stnKrNm":"원덕",
-		"lineNm":"경의중앙선",
+		"lineNm":"중앙선",
 		"convX":"127.547076",
 		"convY":"37.468672"
 	},
 	{
 		"outStnNum":"1216",
 		"stnKrNm":"오빈",
-		"lineNm":"경의중앙선",
+		"lineNm":"중앙선",
 		"convX":"127.473868",
 		"convY":"37.506062"
 	},
 	{
 		"outStnNum":"1214",
 		"stnKrNm":"국수",
-		"lineNm":"경의중앙선",
+		"lineNm":"중앙선",
 		"convX":"127.399367",
 		"convY":"37.516169"
 	},
 	{
 		"outStnNum":"1212",
 		"stnKrNm":"양수",
-		"lineNm":"경의중앙선",
+		"lineNm":"중앙선",
 		"convX":"127.329098",
 		"convY":"37.545981"
 	},
 	{
 		"outStnNum":"1210",
 		"stnKrNm":"팔당",
-		"lineNm":"경의중앙선",
+		"lineNm":"중앙선",
 		"convX":"127.243939",
 		"convY":"37.547371"
 	},
 	{
 		"outStnNum":"1207",
 		"stnKrNm":"양정",
-		"lineNm":"경의중앙선",
+		"lineNm":"중앙선",
 		"convX":"127.19364",
 		"convY":"37.60533"
 	},
@@ -1479,21 +1479,21 @@
 	{
 		"outStnNum":"1204",
 		"stnKrNm":"양원",
-		"lineNm":"경의중앙선",
+		"lineNm":"중앙선",
 		"convX":"127.107906",
 		"convY":"37.606596"
 	},
 	{
 		"outStnNum":"1201",
 		"stnKrNm":"중랑",
-		"lineNm":"경의중앙선",
+		"lineNm":"중앙선",
 		"convX":"127.076116",
 		"convY":"37.594917"
 	},
 	{
 		"outStnNum":"1750",
 		"stnKrNm":"광명",
-		"lineNm":"1호선",
+		"lineNm":"경부선",
 		"convX":"126.884466",
 		"convY":"37.416182"
 	},
@@ -1521,7 +1521,7 @@
 	{
 		"outStnNum":"4317",
 		"stnKrNm":"상현",
-		"lineNm":"신분당선",
+		"lineNm":"신분 당선",
 		"convX":"127.069342",
 		"convY":"37.297664"
 	},
@@ -1738,7 +1738,7 @@
 	{
 		"outStnNum":"3221",
 		"stnKrNm":"인천시청",
-		"lineNm":"인천2호선",
+		"lineNm":"인천2 호선",
 		"convX":"126.701306",
 		"convY":"37.456833"
 	},
@@ -2147,13 +2147,6 @@
 		"lineNm":"8호선",
 		"convX":"127.127562",
 		"convY":"37.55021"
-	},
-	{
-		"outStnNum":"2811",
-		"stnKrNm":"암사역사공원",
-		"lineNm":"8호선",
-		"convX":"127.13702",
-		"convY":"37.55695"
 	},
 	{
 		"outStnNum":"2750",
@@ -2619,7 +2612,7 @@
 	},
 	{
 		"outStnNum":"2524",
-		"stnKrNm":"영등포구청",
+		"stnKrNm":"영등 포구청",
 		"lineNm":"5호선",
 		"convX":"126.89503",
 		"convY":"37.5242"
@@ -2690,28 +2683,28 @@
 	{
 		"outStnNum":"1724",
 		"stnKrNm":"평택",
-		"lineNm":"1호선",
+		"lineNm":"경부선",
 		"convX":"127.085159",
 		"convY":"36.990726"
 	},
 	{
 		"outStnNum":"1728",
 		"stnKrNm":"천안",
-		"lineNm":"1호선",
+		"lineNm":"경부선",
 		"convX":"127.146826",
 		"convY":"36.810005"
 	},
 	{
 		"outStnNum":"1726",
 		"stnKrNm":"직산",
-		"lineNm":"1호선",
+		"lineNm":"경부선",
 		"convX":"127.143904",
 		"convY":"36.870593"
 	},
 	{
 		"outStnNum":"1725",
 		"stnKrNm":"성환",
-		"lineNm":"1호선",
+		"lineNm":"경부선",
 		"convX":"127.126964",
 		"convY":"36.916076"
 	},
@@ -2746,21 +2739,21 @@
 	{
 		"outStnNum":"1721",
 		"stnKrNm":"송탄",
-		"lineNm":"1호선",
+		"lineNm":"경부선",
 		"convX":"127.054301",
 		"convY":"37.075696"
 	},
 	{
 		"outStnNum":"1720",
 		"stnKrNm":"진위",
-		"lineNm":"1호선",
+		"lineNm":"경부선",
 		"convX":"127.062278",
 		"convY":"37.109447"
 	},
 	{
 		"outStnNum":"1718",
 		"stnKrNm":"오산대",
-		"lineNm":"1호선",
+		"lineNm":"경부선",
 		"convX":"127.063197",
 		"convY":"37.168953"
 	},
@@ -2774,7 +2767,7 @@
 	{
 		"outStnNum":"1716",
 		"stnKrNm":"병점",
-		"lineNm":"1호선",
+		"lineNm":"경부선",
 		"convX":"127.032731",
 		"convY":"37.207503"
 	},
@@ -2816,56 +2809,56 @@
 	{
 		"outStnNum":"1763",
 		"stnKrNm":"수리산",
-		"lineNm":"4호선",
+		"lineNm":"안 산선",
 		"convX":"126.925365",
 		"convY":"37.349801"
 	},
 	{
 		"outStnNum":"1762",
 		"stnKrNm":"오이도",
-		"lineNm":"4호선",
+		"lineNm":"안산선",
 		"convX":"126.738714",
 		"convY":"37.362357"
 	},
 	{
 		"outStnNum":"1761",
 		"stnKrNm":"정왕",
-		"lineNm":"4호선",
+		"lineNm":"안산선",
 		"convX":"126.742989",
 		"convY":"37.351735"
 	},
 	{
 		"outStnNum":"1760",
 		"stnKrNm":"신길온천",
-		"lineNm":"4호선",
+		"lineNm":"안산선",
 		"convX":"126.765844",
 		"convY":"37.338212"
 	},
 	{
 		"outStnNum":"1823",
 		"stnKrNm":"도화",
-		"lineNm":"1호선",
+		"lineNm":"경인선",
 		"convX":"126.668672",
 		"convY":"37.46607"
 	},
 	{
 		"outStnNum":"1714",
 		"stnKrNm":"독산",
-		"lineNm":"1호선",
+		"lineNm":"경부선",
 		"convX":"126.889249",
 		"convY":"37.466613"
 	},
 	{
 		"outStnNum":"1816",
 		"stnKrNm":"간석",
-		"lineNm":"1호선",
+		"lineNm":"경인선",
 		"convX":"126.694181",
 		"convY":"37.464737"
 	},
 	{
 		"outStnNum":"1815",
 		"stnKrNm":"부개",
-		"lineNm":"1호선",
+		"lineNm":"경인선",
 		"convX":"126.74109",
 		"convY":"37.488418"
 	},
@@ -2879,42 +2872,42 @@
 	{
 		"outStnNum":"1813",
 		"stnKrNm":"구일",
-		"lineNm":"1호선",
+		"lineNm":"경인선",
 		"convX":"126.870793",
 		"convY":"37.496756"
 	},
 	{
 		"outStnNum":"1957",
 		"stnKrNm":"주엽",
-		"lineNm":"3호선",
+		"lineNm":"일산선",
 		"convX":"126.761334",
 		"convY":"37.670072"
 	},
 	{
 		"outStnNum":"1955",
 		"stnKrNm":"마두",
-		"lineNm":"3호선",
+		"lineNm":"일산선",
 		"convX":"126.77762",
 		"convY":"37.652206"
 	},
 	{
 		"outStnNum":"1954",
 		"stnKrNm":"백석",
-		"lineNm":"3호선",
+		"lineNm":"일산선",
 		"convX":"126.78787",
 		"convY":"37.643114"
 	},
 	{
 		"outStnNum":"1952",
 		"stnKrNm":"화정",
-		"lineNm":"3호선",
+		"lineNm":"일산선",
 		"convX":"126.83265",
 		"convY":"37.634592"
 	},
 	{
 		"outStnNum":"1951",
 		"stnKrNm":"원당",
-		"lineNm":"3호선",
+		"lineNm":"일산선",
 		"convX":"126.843041",
 		"convY":"37.653324"
 	},
@@ -2970,7 +2963,7 @@
 	{
 		"outStnNum":"1457",
 		"stnKrNm":"범계",
-		"lineNm":"4호선",
+		"lineNm":"과천선",
 		"convX":"126.950806",
 		"convY":"37.389793"
 	},
@@ -2984,42 +2977,42 @@
 	{
 		"outStnNum":"1455",
 		"stnKrNm":"인덕원",
-		"lineNm":"4호선",
+		"lineNm":"과천선",
 		"convX":"126.976715",
 		"convY":"37.401553"
 	},
 	{
 		"outStnNum":"1454",
 		"stnKrNm":"정부과천청사",
-		"lineNm":"4호선",
+		"lineNm":"과천선",
 		"convX":"126.98978",
 		"convY":"37.426513"
 	},
 	{
 		"outStnNum":"1452",
 		"stnKrNm":"대공원",
-		"lineNm":"4호선",
+		"lineNm":"과천선",
 		"convX":"127.006523",
 		"convY":"37.435675"
 	},
 	{
 		"outStnNum":"1451",
 		"stnKrNm":"경마공원",
-		"lineNm":"4호선",
+		"lineNm":"과천선",
 		"convX":"127.007888",
 		"convY":"37.443885"
 	},
 	{
 		"outStnNum":"1907",
 		"stnKrNm":"가능",
-		"lineNm":"1호선",
+		"lineNm":"경원선",
 		"convX":"127.044213",
 		"convY":"37.748577"
 	},
 	{
 		"outStnNum":"1822",
 		"stnKrNm":"중동",
-		"lineNm":"1호선",
+		"lineNm":"경인선",
 		"convX":"126.764843",
 		"convY":"37.486562"
 	},
@@ -3033,63 +3026,63 @@
 	{
 		"outStnNum":"1759",
 		"stnKrNm":"안산",
-		"lineNm":"4호선",
+		"lineNm":"안산선",
 		"convX":"126.788532",
 		"convY":"37.327082"
 	},
 	{
 		"outStnNum":"1758",
 		"stnKrNm":"초지",
-		"lineNm":"4호선",
+		"lineNm":"안산선",
 		"convX":"126.805913",
 		"convY":"37.320646"
 	},
 	{
 		"outStnNum":"1756",
 		"stnKrNm":"중앙",
-		"lineNm":"4호선",
+		"lineNm":"안산선",
 		"convX":"126.838573",
 		"convY":"37.315941"
 	},
 	{
 		"outStnNum":"1754",
 		"stnKrNm":"상록수",
-		"lineNm":"4호선",
+		"lineNm":"안산선",
 		"convX":"126.866489",
 		"convY":"37.302795"
 	},
 	{
 		"outStnNum":"1751",
 		"stnKrNm":"산본",
-		"lineNm":"4호선",
+		"lineNm":"안산선",
 		"convX":"126.933274",
 		"convY":"37.358101"
 	},
 	{
 		"outStnNum":"1713",
 		"stnKrNm":"수원",
-		"lineNm":"1호선",
+		"lineNm":"경부선",
 		"convX":"126.999561",
 		"convY":"37.266348"
 	},
 	{
 		"outStnNum":"1711",
 		"stnKrNm":"성균관대",
-		"lineNm":"1호선",
+		"lineNm":"경부선",
 		"convX":"126.97075",
 		"convY":"37.300349"
 	},
 	{
 		"outStnNum":"1710",
 		"stnKrNm":"의왕",
-		"lineNm":"1호선",
+		"lineNm":"경부선",
 		"convX":"126.948217",
 		"convY":"37.320852"
 	},
 	{
 		"outStnNum":"1707",
 		"stnKrNm":"명학",
-		"lineNm":"1호선",
+		"lineNm":"경부선",
 		"convX":"126.935433",
 		"convY":"37.384653"
 	},
@@ -3103,21 +3096,21 @@
 	{
 		"outStnNum":"1703",
 		"stnKrNm":"금천구청",
-		"lineNm":"1호선",
+		"lineNm":"경부선",
 		"convX":"126.89398",
 		"convY":"37.455626"
 	},
 	{
 		"outStnNum":"1701",
 		"stnKrNm":"구로",
-		"lineNm":"1호선",
+		"lineNm":"경부선",
 		"convX":"126.881966",
 		"convY":"37.503039"
 	},
 	{
 		"outStnNum":"1812",
 		"stnKrNm":"인천",
-		"lineNm":"1호선",
+		"lineNm":"경인선",
 		"convX":"126.616801",
 		"convY":"37.476079"
 	},
@@ -3131,14 +3124,14 @@
 	{
 		"outStnNum":"1808",
 		"stnKrNm":"동암",
-		"lineNm":"1호선",
+		"lineNm":"경인선",
 		"convX":"126.702896",
 		"convY":"37.471408"
 	},
 	{
 		"outStnNum":"1807",
 		"stnKrNm":"백운",
-		"lineNm":"1호선",
+		"lineNm":"경인선",
 		"convX":"126.707704",
 		"convY":"37.483664"
 	},
@@ -3152,105 +3145,105 @@
 	{
 		"outStnNum":"1804",
 		"stnKrNm":"부천",
-		"lineNm":"1호선",
+		"lineNm":"경인선",
 		"convX":"126.782686",
 		"convY":"37.48405"
 	},
 	{
 		"outStnNum":"1801",
 		"stnKrNm":"개봉",
-		"lineNm":"1호선",
+		"lineNm":"경인선",
 		"convX":"126.85968",
 		"convY":"37.494594"
 	},
 	{
 		"outStnNum":"1905",
 		"stnKrNm":"회룡",
-		"lineNm":"1호선",
+		"lineNm":"경원선",
 		"convX":"127.04736",
 		"convY":"37.724416"
 	},
 	{
 		"outStnNum":"1903",
 		"stnKrNm":"도봉산",
-		"lineNm":"1호선",
+		"lineNm":"경원선",
 		"convX":"127.046049",
 		"convY":"37.689534"
 	},
 	{
 		"outStnNum":"1901",
 		"stnKrNm":"방학",
-		"lineNm":"1호선",
+		"lineNm":"경원선",
 		"convX":"127.044273",
 		"convY":"37.667503"
 	},
 	{
 		"outStnNum":"1021",
 		"stnKrNm":"녹천",
-		"lineNm":"1호선",
+		"lineNm":"경원선",
 		"convX":"127.051269",
 		"convY":"37.644799"
 	},
 	{
 		"outStnNum":"1019",
 		"stnKrNm":"광운대",
-		"lineNm":"1호선",
+		"lineNm":"경 원선",
 		"convX":"127.061835",
 		"convY":"37.623632"
 	},
 	{
 		"outStnNum":"1017",
 		"stnKrNm":"신이문",
-		"lineNm":"1호선",
+		"lineNm":"경원선",
 		"convX":"127.067325",
 		"convY":"37.601854"
 	},
 	{
 		"outStnNum":"1014",
 		"stnKrNm":"청량리",
-		"lineNm":"경춘천",
+		"lineNm":"경원선",
 		"convX":"127.0483",
 		"convY":"37.580759"
 	},
 	{
 		"outStnNum":"1013",
 		"stnKrNm":"왕십리",
-		"lineNm":"경의중앙선",
+		"lineNm":"경원선",
 		"convX":"127.038352",
 		"convY":"37.561827"
 	},
 	{
 		"outStnNum":"1011",
 		"stnKrNm":"옥수",
-		"lineNm":"경의중앙선",
+		"lineNm":"경원선",
 		"convX":"127.018672",
 		"convY":"37.540446"
 	},
 	{
 		"outStnNum":"1010",
 		"stnKrNm":"한남",
-		"lineNm":"경의중앙선",
+		"lineNm":"경원선",
 		"convX":"127.009169",
 		"convY":"37.52943"
 	},
 	{
 		"outStnNum":"1008",
 		"stnKrNm":"이촌",
-		"lineNm":"경의중앙선",
+		"lineNm":"경원선",
 		"convX":"126.973406",
 		"convY":"37.522427"
 	},
 	{
 		"outStnNum":"1006",
 		"stnKrNm":"영등포",
-		"lineNm":"1호선",
+		"lineNm":"경부선",
 		"convX":"126.907628",
 		"convY":"37.515504"
 	},
 	{
 		"outStnNum":"1004",
 		"stnKrNm":"노량진",
-		"lineNm":"1호선",
+		"lineNm":"경부선",
 		"convX":"126.94271",
 		"convY":"37.514149"
 	},
@@ -3355,7 +3348,7 @@
 	{
 		"outStnNum":"2561",
 		"stnKrNm":"마천",
-		"lineNm":"5호선",
+		"lineNm":"5호 선",
 		"convX":"127.152781",
 		"convY":"37.49499"
 	},
@@ -3390,7 +3383,7 @@
 	{
 		"outStnNum":"2553",
 		"stnKrNm":"고덕",
-		"lineNm":"5호선",
+		"lineNm":"5호 선",
 		"convX":"127.154151",
 		"convY":"37.555004"
 	},
@@ -3404,21 +3397,21 @@
 	{
 		"outStnNum":"4508",
 		"stnKrNm":"삼가",
-		"lineNm":"용인경전철",
+		"lineNm":"에버라인선",
 		"convX":"127.168075",
 		"convY":"37.242115"
 	},
 	{
 		"outStnNum":"4504",
 		"stnKrNm":"어정",
-		"lineNm":"용인경전철",
+		"lineNm":"에버라인선",
 		"convX":"127.143714",
 		"convY":"37.274917"
 	},
 	{
 		"outStnNum":"4501",
 		"stnKrNm":"기흥",
-		"lineNm":"용인경전철",
+		"lineNm":"에버라인선",
 		"convX":"127.116665",
 		"convY":"37.275449"
 	},
@@ -3493,6 +3486,20 @@
 		"convY":"37.580842"
 	},
 	{
+		"outStnNum":"1264",
+		"stnKrNm":"홍대입구",
+		"lineNm":"경의중앙선",
+		"convX":"126.926683",
+		"convY":"37.557641"
+	},
+	{
+		"outStnNum":"1262",
+		"stnKrNm":"공덕",
+		"lineNm":"경의중앙선",
+		"convX":"126.952099",
+		"convY":"37.542596"
+	},
+	{
 		"outStnNum":"0411",
 		"stnKrNm":"노원",
 		"lineNm":"4호선",
@@ -3537,28 +3544,28 @@
 	{
 		"outStnNum":"1408",
 		"stnKrNm":"신창",
-		"lineNm":"1호선",
+		"lineNm":"장항선",
 		"convX":"126.951108",
 		"convY":"36.769502"
 	},
 	{
 		"outStnNum":"1401",
 		"stnKrNm":"봉명",
-		"lineNm":"1호선",
+		"lineNm":"장항선",
 		"convX":"127.135763",
 		"convY":"36.801215"
 	},
 	{
 		"outStnNum":"1885",
 		"stnKrNm":"연수",
-		"lineNm":"수의분당선",
+		"lineNm":"수인선",
 		"convX":"126.67894",
 		"convY":"37.417804"
 	},
 	{
 		"outStnNum":"1882",
 		"stnKrNm":"호구포",
-		"lineNm":"수의분당선",
+		"lineNm":"수인선",
 		"convX":"126.708627",
 		"convY":"37.401637"
 	},
@@ -3572,21 +3579,21 @@
 	{
 		"outStnNum":"1913",
 		"stnKrNm":"동두천중앙",
-		"lineNm":"1호선",
+		"lineNm":"경원선",
 		"convX":"127.056482",
 		"convY":"37.901885"
 	},
 	{
 		"outStnNum":"1909",
 		"stnKrNm":"양주",
-		"lineNm":"1호선",
+		"lineNm":"경원선",
 		"convX":"127.044708",
 		"convY":"37.774381"
 	},
 	{
 		"outStnNum":"1729",
 		"stnKrNm":"당정",
-		"lineNm":"1호선",
+		"lineNm":"경부선",
 		"convX":"126.948345",
 		"convY":"37.344285"
 	},
@@ -3621,42 +3628,42 @@
 	{
 		"outStnNum":"1217",
 		"stnKrNm":"양평",
-		"lineNm":"경의중앙선",
+		"lineNm":"중앙선",
 		"convX":"127.491837",
 		"convY":"37.492773"
 	},
 	{
 		"outStnNum":"1215",
 		"stnKrNm":"아신",
-		"lineNm":"경의중앙선",
+		"lineNm":"중앙선",
 		"convX":"127.443173",
 		"convY":"37.51382"
 	},
 	{
 		"outStnNum":"1211",
 		"stnKrNm":"운길산",
-		"lineNm":"경의중앙선",
+		"lineNm":"중앙선",
 		"convX":"127.310115",
 		"convY":"37.554669"
 	},
 	{
 		"outStnNum":"1208",
 		"stnKrNm":"덕소",
-		"lineNm":"경의중앙선",
+		"lineNm":"중앙선",
 		"convX":"127.208832",
 		"convY":"37.586781"
 	},
 	{
 		"outStnNum":"1205",
 		"stnKrNm":"구리",
-		"lineNm":"경의중앙선",
+		"lineNm":"중앙선",
 		"convX":"127.143869",
 		"convY":"37.603392"
 	},
 	{
 		"outStnNum":"1202",
 		"stnKrNm":"상봉",
-		"lineNm":"경의중앙선",
+		"lineNm":"중앙선",
 		"convX":"127.08504",
 		"convY":"37.596678"
 	},
@@ -3887,34 +3894,34 @@
 	{
 		"outStnNum":"1755",
 		"stnKrNm":"한대앞",
-		"lineNm":"4호선",
+		"lineNm":"안산선",
 		"convX":"126.85344",
 		"convY":"37.309689"
 	},
 	{
 		"outStnNum":"1712",
 		"stnKrNm":"화서",
-		"lineNm":"1호선",
+		"lineNm":"경부선",
 		"convX":"126.989627",
 		"convY":"37.283862"
 	},
 	{
 		"outStnNum":"1708",
 		"stnKrNm":"금정",
-		"lineNm":"1호선",
+		"lineNm":"경부선",
 		"convX":"126.943429",
 		"convY":"37.372221"
 	},
 	{
 		"outStnNum":"1705",
 		"stnKrNm":"관악",
-		"lineNm":"1호선",
+		"lineNm":"경부선",
 		"convX":"126.908706",
 		"convY":"37.419232"
 	},
 	{
 		"outStnNum":"1810",
-		"stnKrNm":"제물포",
+		"stnKrNm":"제물 포",
 		"lineNm":"경인선",
 		"convX":"126.656666",
 		"convY":"37.466769"
@@ -3922,56 +3929,56 @@
 	{
 		"outStnNum":"1806",
 		"stnKrNm":"부평",
-		"lineNm":"1호선",
+		"lineNm":"경인선",
 		"convX":"126.724506",
 		"convY":"37.489445"
 	},
 	{
 		"outStnNum":"1803",
 		"stnKrNm":"역곡",
-		"lineNm":"1호선",
+		"lineNm":"경인선",
 		"convX":"126.811502",
 		"convY":"37.485178"
 	},
 	{
 		"outStnNum":"1906",
 		"stnKrNm":"의정부",
-		"lineNm":"1호선",
+		"lineNm":"경원선",
 		"convX":"127.045958",
 		"convY":"37.738415"
 	},
 	{
 		"outStnNum":"1022",
 		"stnKrNm":"창동",
-		"lineNm":"1호선",
+		"lineNm":"경원선",
 		"convX":"127.047806",
 		"convY":"37.653007"
 	},
 	{
 		"outStnNum":"1018",
 		"stnKrNm":"석계",
-		"lineNm":"1호선",
+		"lineNm":"경원선",
 		"convX":"127.065934",
 		"convY":"37.614532"
 	},
 	{
 		"outStnNum":"1012",
 		"stnKrNm":"응봉",
-		"lineNm":"경의중앙선",
+		"lineNm":"경원선",
 		"convX":"127.034538",
 		"convY":"37.549946"
 	},
 	{
 		"outStnNum":"1009",
 		"stnKrNm":"서빙고",
-		"lineNm":"경의중앙선",
+		"lineNm":"경원선",
 		"convX":"126.988537",
 		"convY":"37.519594"
 	},
 	{
 		"outStnNum":"1005",
 		"stnKrNm":"대방",
-		"lineNm":"1호선",
+		"lineNm":"경부선",
 		"convX":"126.926382",
 		"convY":"37.513342"
 	},
@@ -4370,42 +4377,42 @@
 	{
 		"outStnNum":"1727",
 		"stnKrNm":"두정",
-		"lineNm":"1호선",
+		"lineNm":"경부선",
 		"convX":"127.14896",
 		"convY":"36.833705"
 	},
 	{
 		"outStnNum":"1032",
 		"stnKrNm":"신길",
-		"lineNm":"1호선",
+		"lineNm":"경부선",
 		"convX":"126.917865",
 		"convY":"37.516862"
 	},
 	{
 		"outStnNum":"1722",
 		"stnKrNm":"서정리",
-		"lineNm":"1호선",
+		"lineNm":"경부선",
 		"convX":"127.052819",
 		"convY":"37.056496"
 	},
 	{
 		"outStnNum":"1719",
 		"stnKrNm":"오산",
-		"lineNm":"1호선",
+		"lineNm":"경부선",
 		"convX":"127.06672",
 		"convY":"37.145885"
 	},
 	{
 		"outStnNum":"1717",
 		"stnKrNm":"세마",
-		"lineNm":"1호선",
+		"lineNm":"경부선",
 		"convX":"127.04318",
 		"convY":"37.187533"
 	},
 	{
 		"outStnNum":"1715",
 		"stnKrNm":"세류",
-		"lineNm":"1호선",
+		"lineNm":"경부선",
 		"convX":"127.013222",
 		"convY":"37.245025"
 	},
@@ -4440,42 +4447,42 @@
 	{
 		"outStnNum":"1817",
 		"stnKrNm":"도원",
-		"lineNm":"1호선",
+		"lineNm":"경인선",
 		"convX":"126.642706",
 		"convY":"37.468446"
 	},
 	{
 		"outStnNum":"1814",
 		"stnKrNm":"소사",
-		"lineNm":"1호선",
+		"lineNm":"경인선",
 		"convX":"126.79544",
 		"convY":"37.482753"
 	},
 	{
 		"outStnNum":"1958",
 		"stnKrNm":"대화",
-		"lineNm":"3호선",
+		"lineNm":"일산선",
 		"convX":"126.747569",
 		"convY":"37.676087"
 	},
 	{
 		"outStnNum":"1956",
 		"stnKrNm":"정발산",
-		"lineNm":"3호선",
+		"lineNm":"일산선",
 		"convX":"126.773359",
 		"convY":"37.659477"
 	},
 	{
 		"outStnNum":"1953",
 		"stnKrNm":"대곡",
-		"lineNm":"3호선",
+		"lineNm":"일산선",
 		"convX":"126.811024",
 		"convY":"37.631626"
 	},
 	{
 		"outStnNum":"1950",
 		"stnKrNm":"삼송",
-		"lineNm":"3호선",
+		"lineNm":"일산선",
 		"convX":"126.895558",
 		"convY":"37.653083"
 	},
@@ -4510,42 +4517,42 @@
 	{
 		"outStnNum":"1456",
 		"stnKrNm":"평촌",
-		"lineNm":"4호선",
+		"lineNm":"과천선",
 		"convX":"126.963883",
 		"convY":"37.394287"
 	},
 	{
 		"outStnNum":"1453",
 		"stnKrNm":"과천",
-		"lineNm":"4호선",
+		"lineNm":"과천선",
 		"convX":"126.996568",
 		"convY":"37.433021"
 	},
 	{
 		"outStnNum":"1450",
 		"stnKrNm":"선바위",
-		"lineNm":"4호선",
+		"lineNm":"과천선",
 		"convX":"127.002303",
 		"convY":"37.451673"
 	},
 	{
 		"outStnNum":"1821",
 		"stnKrNm":"온수",
-		"lineNm":"1호선",
+		"lineNm":"경인선",
 		"convX":"126.824086",
 		"convY":"37.492433"
 	},
 	{
 		"outStnNum":"1757",
 		"stnKrNm":"고잔",
-		"lineNm":"4호선",
+		"lineNm":"안산선",
 		"convX":"126.823144",
 		"convY":"37.316784"
 	},
 	{
 		"outStnNum":"1753",
 		"stnKrNm":"반월",
-		"lineNm":"4호선",
+		"lineNm":"안산선",
 		"convX":"126.903524",
 		"convY":"37.312212"
 	},
@@ -4559,14 +4566,14 @@
 	{
 		"outStnNum":"1709",
 		"stnKrNm":"군포",
-		"lineNm":"1호선",
+		"lineNm":"경부선",
 		"convX":"126.948462",
 		"convY":"37.35356"
 	},
 	{
 		"outStnNum":"1704",
 		"stnKrNm":"석수",
-		"lineNm":"1호선",
+		"lineNm":"경부선",
 		"convX":"126.902295",
 		"convY":"37.435047"
 	},
@@ -4580,28 +4587,28 @@
 	{
 		"outStnNum":"1809",
 		"stnKrNm":"주안",
-		"lineNm":"1호선",
+		"lineNm":"경인선",
 		"convX":"126.679742",
 		"convY":"37.465047"
 	},
 	{
 		"outStnNum":"1805",
 		"stnKrNm":"송내",
-		"lineNm":"1호선",
+		"lineNm":"경인선",
 		"convX":"126.753664",
 		"convY":"37.4876"
 	},
 	{
 		"outStnNum":"1802",
 		"stnKrNm":"오류동",
-		"lineNm":"1호선",
+		"lineNm":"경인선",
 		"convX":"126.845365",
 		"convY":"37.494526"
 	},
 	{
 		"outStnNum":"1904",
 		"stnKrNm":"망월사",
-		"lineNm":"1호선",
+		"lineNm":"경원선",
 		"convX":"127.047455",
 		"convY":"37.709914"
 	},
@@ -4615,14 +4622,14 @@
 	{
 		"outStnNum":"1020",
 		"stnKrNm":"월계",
-		"lineNm":"1호선",
+		"lineNm":"경원선",
 		"convX":"127.058831",
 		"convY":"37.633212"
 	},
 	{
 		"outStnNum":"1016",
 		"stnKrNm":"외대앞",
-		"lineNm":"1호선",
+		"lineNm":"경원선",
 		"convX":"127.063549",
 		"convY":"37.596073"
 	},
@@ -4636,14 +4643,14 @@
 	{
 		"outStnNum":"1007",
 		"stnKrNm":"신도림",
-		"lineNm":"1호선",
+		"lineNm":"경부선",
 		"convX":"126.891144",
 		"convY":"37.508787"
 	},
 	{
 		"outStnNum":"1003",
 		"stnKrNm":"용산",
-		"lineNm":"1호선",
+		"lineNm":"경부선",
 		"convX":"126.964561",
 		"convY":"37.529849"
 	},
@@ -4720,7 +4727,7 @@
 	{
 		"outStnNum":"4510",
 		"stnKrNm":"명지대",
-		"lineNm":"용인경전철",
+		"lineNm":"에버라인선",
 		"convX":"127.190294",
 		"convY":"37.237964"
 	},
@@ -4734,35 +4741,35 @@
 	{
 		"outStnNum":"1752",
 		"stnKrNm":"대야미",
-		"lineNm":"4호선",
+		"lineNm":"안산선",
 		"convX":"126.917332",
 		"convY":"37.328467"
 	},
 	{
 		"outStnNum":"1702",
 		"stnKrNm":"가산디지털단지",
-		"lineNm":"1호선",
+		"lineNm":"경부선",
 		"convX":"126.882581",
 		"convY":"37.481581"
 	},
 	{
 		"outStnNum":"1902",
 		"stnKrNm":"도봉",
-		"lineNm":"1호선",
+		"lineNm":"경원선",
 		"convX":"127.045595",
 		"convY":"37.679563"
 	},
 	{
 		"outStnNum":"1015",
 		"stnKrNm":"회기",
-		"lineNm":"1호선",
+		"lineNm":"중앙선",
 		"convX":"127.057583",
 		"convY":"37.58946"
 	},
 	{
 		"outStnNum":"1002",
 		"stnKrNm":"남영",
-		"lineNm":"1호선",
+		"lineNm":"경부선",
 		"convX":"126.9713",
 		"convY":"37.541021"
 	},
@@ -4902,7 +4909,7 @@
 	{
 		"outStnNum":"0405",
 		"stnKrNm":"진접",
-		"lineNm":"4호선",
+		"lineNm":"진접선",
 		"convX":"127.2034",
 		"convY":"37.7205"
 	},
@@ -4937,42 +4944,35 @@
 	{
 		"outStnNum":"0406",
 		"stnKrNm":"오남",
-		"lineNm":"4호선",
+		"lineNm":"진접선",
 		"convX":"127.19281",
 		"convY":"37.705"
 	},
 	{
 		"outStnNum":"1917",
-		"stnKrNm":"청산",
-		"lineNm":"1호선",
-		"convX":"127.06912",
-		"convY":"37.98172"
-	},
-	{
-		"outStnNum":"1917",
-		"stnKrNm":"시우",
-		"lineNm":"1호선",
+		"stnKrNm":"초성리",
+		"lineNm":"경원선",
 		"convX":"127.06912",
 		"convY":"37.98172"
 	},
 	{
 		"outStnNum":"0408",
 		"stnKrNm":"별내별가람",
-		"lineNm":"4호선",
+		"lineNm":"진접선",
 		"convX":"127.11581",
 		"convY":"37.66778"
 	},
 	{
 		"outStnNum":"1918",
 		"stnKrNm":"전곡",
-		"lineNm":"1호선",
+		"lineNm":"경원선",
 		"convX":"127.0718",
 		"convY":"38.02458"
 	},
 	{
 		"outStnNum":"1919",
 		"stnKrNm":"연천",
-		"lineNm":"1호선",
+		"lineNm":"경원선",
 		"convX":"127.07372",
 		"convY":"38.10073"
 	},
@@ -5077,28 +5077,28 @@
 	{
 		"outStnNum":"1873",
 		"stnKrNm":"고색",
-		"lineNm":"수의분당선",
+		"lineNm":"수 인선",
 		"convX":"126.980248",
 		"convY":"37.24963"
 	},
 	{
 		"outStnNum":"1875",
 		"stnKrNm":"어천",
-		"lineNm":"수의분당선",
+		"lineNm":"수인선",
 		"convX":"126.90879",
 		"convY":"37.250102"
 	},
 	{
 		"outStnNum":"1877",
 		"stnKrNm":"사리",
-		"lineNm":"수의분당선",
+		"lineNm":"수인선",
 		"convX":"126.85685",
 		"convY":"37.28998"
 	},
 	{
 		"outStnNum":"1458",
 		"stnKrNm":"금정",
-		"lineNm":"4호선",
+		"lineNm":"과천선",
 		"convX":"126.943417",
 		"convY":"37.372209"
 	},
@@ -5119,14 +5119,14 @@
 	{
 		"outStnNum":"1876",
 		"stnKrNm":"야목",
-		"lineNm":"수의분당선",
+		"lineNm":"수인선",
 		"convX":"126.879483",
 		"convY":"37.264179"
 	},
 	{
 		"outStnNum":"1874",
 		"stnKrNm":"오목천",
-		"lineNm":"수의분당선",
+		"lineNm":"수인선",
 		"convX":"126.963676",
 		"convY":"37.24304"
 	},
@@ -5371,7 +5371,7 @@
 	{
 		"outStnNum":"1404",
 		"stnKrNm":"탕정",
-		"lineNm":"1호선",
+		"lineNm":"장항선",
 		"convX":"127.08485",
 		"convY":"36.78866"
 	},

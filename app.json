@@ -10,7 +10,7 @@
     "name": "frontend",
     "slug": "frontend",
     "android": {
-      "package": "com.MobilityHub.TransitTime_NYC"
+      "package": "com.MobilityHub.TrainTime_Seoul"
     }
   }
 }

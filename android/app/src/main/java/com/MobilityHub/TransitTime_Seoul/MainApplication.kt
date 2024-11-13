@@ -1,4 +1,4 @@
-package com.MobilityHub.TransitTime_NYC
+package com.MobilityHub.TransitTime_Seoul
 
 import android.app.Application
 import android.content.res.Configuration
@@ -11,8 +11,8 @@ import com.facebook.react.ReactHost
 import com.facebook.react.defaults.DefaultNewArchitectureEntryPoint.load
 import com.facebook.react.defaults.DefaultReactNativeHost
 import com.facebook.soloader.SoLoader
-import com.MobilityHub.TransitTime_NYC.WidgetUpdaterPackage
-import com.MobilityHub.TransitTime_NYC.SharedPreferencesPackage
+import com.MobilityHub.TransitTime_Seoul.WidgetUpdaterPackage
+import com.MobilityHub.TransitTime_Seoul.SharedPreferencesPackage
 import expo.modules.ApplicationLifecycleDispatcher
 import expo.modules.ReactNativeHostWrapper
 

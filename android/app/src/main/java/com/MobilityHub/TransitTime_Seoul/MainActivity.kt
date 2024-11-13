@@ -1,4 +1,4 @@
-package com.MobilityHub.TransitTime_NYC
+package com.MobilityHub.TransitTime_Seoul
 
 import android.os.Build
 import android.os.Bundle

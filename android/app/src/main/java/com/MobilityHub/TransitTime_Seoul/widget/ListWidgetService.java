@@ -1,5 +1,5 @@
-// frontend/android/app/src/main/java/com/MobilityHub/TransitTime_NYC/widget/ListWidgetService.java
-package com.MobilityHub.TransitTime_NYC.widget;
+// frontend/android/app/src/main/java/com/MobilityHub/TransitTime_Seoul/widget/ListWidgetService.java
+package com.MobilityHub.TransitTime_Seoul.widget;
 
 import android.content.Intent;
 import android.widget.RemoteViewsService;

@@ -1,4 +1,4 @@
-package com.MobilityHub.TransitTime_NYC;
+package com.MobilityHub.TransitTime_Seoul;
 
 import android.appwidget.AppWidgetManager;
 import android.content.ComponentName;
@@ -7,7 +7,7 @@ import android.content.Intent;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
-import com.MobilityHub.TransitTime_NYC.widget.List; // Import your widget provider class
+import com.MobilityHub.TransitTime_Seoul.widget.List; // Import your widget provider class
 
 public class WidgetUpdaterModule extends ReactContextBaseJavaModule {
 

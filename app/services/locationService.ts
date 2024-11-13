@@ -38,25 +38,26 @@ export const findNearestStation = async (
 
     console.log(`The users lat, lon are ${user_lat}, ${user_long}`);
   
-    for (const station of stations_locs as StationLocation[]) {
+    for (const station of stations_locs) {
       const station_lat = parseFloat(station.convY as string);
       const station_lon = parseFloat(station.convX as string);
       // Assuming haversineDistance is a function that calculates distance
-      const station_key = `${station.stnKrNm}++++${station.lineNm}`
-      distances_dict[station_key] = haversineDistance(user_lat, user_long, station_lat, station_lon);
+      const distance = haversineDistance(user_lat, user_long, station_lat, station_lon);
+
+      if (distance <= 1.0) { // Early filtering
+        const station_key = `${station.stnKrNm}++++${station.lineNm}`;
+        distances_dict[station_key] = distance;
+      }
     }
   
     // this is a helper function to be used only by findNearestStation
     // Find the nearest station (station will come with a line number so there might be the same station with different lines. i.e closest 3 statoins might be gimpo air gimpo air gimpo air , 3 diff lines same station)
     // For now lets just use Station + Line as one stationitem, and see how it affects use case. 
     const getNearestStations = (distances_dict: { [key: string]: number }): { station_name: string; distance: number }[] => {
-        const nearestStations = Object.entries(distances_dict)
-          .map(([station_name, distance]) => ({ station_name, distance })) // Convert entries to objects
-          .sort((a, b) => a.distance - b.distance) // Sort by distance in ascending order
-          .slice(0, 5); // Get the nearest five stations
-      
-        return nearestStations; // Return the array of nearest stations
-      };
+        return Object.entries(distances_dict)
+          .map(([station_name, distance]) => ({ station_name, distance }))
+          .sort((a, b) => a.distance - b.distance);
+    };
       
     return getNearestStations(distances_dict);
 };

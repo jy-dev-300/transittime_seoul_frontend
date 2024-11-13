@@ -1,4 +1,4 @@
-package com.MobilityHub.TransitTime_NYC;
+package com.MobilityHub.TransitTime_Seoul;
 
 import com.facebook.react.ReactPackage;
 import com.facebook.react.bridge.NativeModule;
@@ -9,14 +9,12 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import com.MobilityHub.TransitTime_NYC.SharedPreferencesModule;
-
-public class SharedPreferencesPackage implements ReactPackage {
+public class WidgetUpdaterPackage implements ReactPackage {
 
     @Override
     public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
         List<NativeModule> modules = new ArrayList<>();
-        modules.add(new SharedPreferencesModule(reactContext)); // Add your module here
+        modules.add(new WidgetUpdaterModule(reactContext)); // Add your module here
         return modules;
     }
 
@@ -25,4 +23,3 @@ public class SharedPreferencesPackage implements ReactPackage {
         return Collections.emptyList(); // No view managers in this package
     }
 }
-
