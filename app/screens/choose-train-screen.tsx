@@ -80,6 +80,12 @@ const ChooseTrainScreen: React.FC = () => {
     setRefreshing(false);
   };
 
+  // Check if it's after 1 a.m.
+  const isAfterServiceHours = () => {
+    const currentHour = new Date().getHours();
+    return currentHour >= 1 && currentHour <= 4;
+  };
+
   return (
     <View style={styles.container}>
       <ScrollView
@@ -88,99 +94,104 @@ const ChooseTrainScreen: React.FC = () => {
         bounces={true}
         overScrollMode="always"
       >
-        {/* Render each train entry or default message if no trains */}
-        {trains.length === 0 ? (
-          <View>
-            <TouchableOpacity style={styles.stationButton}>
-            <View style={styles.horizontalContainer}>
-                <View style={styles.iconContainer}>
-                  {getLogoResource(Array.isArray(lineName) ? lineName[0] : lineName) && (
-                    React.createElement(getLogoResource(Array.isArray(lineName) ? lineName[0] : lineName))
-                  )}
-                </View>
-                <View style={styles.textContainer}>
-                  <Text style={styles.stationName}>{stationName}</Text>
-                </View>
-                <View style={styles.timeContainer}>
-                  <Text style={styles.arrivalTime}>정보없음</Text> 
-                </View>
-              </View>
-            </TouchableOpacity>
-            {/* Render the logo when there are no trains */}
-          </View>
+        {isAfterServiceHours() ? (
+          <Text style={styles.serviceOverMessage}>
+            지하철 운행이 끝나서, 앱 서비스 마감입니다.
+            {"\n"}App service is over for today, as most subway services have stopped.
+          </Text>
         ) : (
-          trains.map((train, index) => {
-            const LineIcon = getLogoResource(Array.isArray(lineName) ? lineName[0] : lineName);
-
-            // Extract number from arvlMsg2 if it contains brackets
-            const bracketMatch = train.arvlMsg2.match(/\[(\d+)\]/);
-            const numberInBrackets = bracketMatch ? bracketMatch[1] : null;
-
-            // Combined logic for formatted message
-            const formattedMessage = (() => {
-              if (train.arvlMsg2.includes("전역 도착")) {
-                return "전역" + "\n" + "도착";
-              } else if (train.arvlMsg2.includes("전역 진입")) {
-                return "전역" + "\n" + "진입";
-              } else if (train.arvlMsg2.includes("전역 출발")) {
-                return "전역" + "\n" + "출발";
-              } else if (train.arvlMsg2.includes("도착") && 
-                         train.arvlMsg2.replace("도착", "").trim() === train.stationName) {
-                return "도착";
-              } else if (train.arvlMsg2.includes("출발") && 
-                         train.arvlMsg2.replace("출발", "").trim() === train.stationName) {
-                return "출발";
-              } else if (train.arvlMsg2.includes("진입") && 
-                         train.arvlMsg2.replace("진입", "").trim() === train.stationName) {
-                return "진입";
-              } 
-              return null; // Return null if no conditions match
-            })();
-
-            return (
-              <TouchableOpacity
-                key={`${train.stationName}-${train.lineName}-${index}`} // Make the key more unique
-                style={styles.stationButton}
-              >
+          trains.length === 0 ? (
+            <View>
+              <TouchableOpacity style={styles.stationButton}>
                 <View style={styles.horizontalContainer}>
-                  {LineIcon && (
-                    <View style={styles.iconContainer}>
-                      <LineIcon />
-                    </View>
-                  )}
+                  <View style={styles.iconContainer}>
+                    {getLogoResource(Array.isArray(lineName) ? lineName[0] : lineName) && (
+                      React.createElement(getLogoResource(Array.isArray(lineName) ? lineName[0] : lineName))
+                    )}
+                  </View>
                   <View style={styles.textContainer}>
-                    <Text style={styles.stationName}>{train.stationName}</Text>
-                    <Text style={styles.direction}>{train.direction}</Text>
-                    <Text
-                      style={[
-                        styles.typeOfTrain,
-                        train.typeOfTrain === "급행" && styles.expressTrainType, // Conditional style
-                      ]}
-                    >
-                      {train.typeOfTrain}
-                    </Text>
+                    <Text style={styles.stationName}>{stationName}</Text>
                   </View>
                   <View style={styles.timeContainer}>
-                    {train.arrivalTime === "0" ? (
-                      <View style={styles.arrivalTime}>
-                        {numberInBrackets && (
-                          <Text style={styles.arrivalTimeNumber}>{numberInBrackets} 역</Text>
-                        )}
-                        {numberInBrackets && <Text style={styles.arrivalTimeSuffix}>남음</Text>}
-                        {formattedMessage && (
-                          <Text style={styles.formattedArrivalMessage}>{formattedMessage}</Text>
-                        )}
-                      </View>
-                    ) : (
-                      <Text style={styles.arrivalTime}>{train.arrivalTime} 분</Text>
-                    )}
+                    <Text style={styles.arrivalTime}>정보없음</Text> 
                   </View>
                 </View>
               </TouchableOpacity>
-            );
-          })
-        )}
-        {/* Display error message if it exists */}
+            </View>
+          ) : (
+            trains.map((train, index) => {
+              const LineIcon = getLogoResource(Array.isArray(lineName) ? lineName[0] : lineName);
+
+              // Extract number from arvlMsg2 if it contains brackets
+              const bracketMatch = train.arvlMsg2.match(/\[(\d+)\]/);
+              const numberInBrackets = bracketMatch ? bracketMatch[1] : null;
+
+              // Combined logic for formatted message
+              const formattedMessage = (() => {
+                if (train.arvlMsg2.includes("전역 도착")) {
+                  return "전역" + "\n" + "도착";
+                } else if (train.arvlMsg2.includes("전역 진입")) {
+                  return "전역" + "\n" + "진입";
+                } else if (train.arvlMsg2.includes("전역 출발")) {
+                  return "전역" + "\n" + "출발";
+                } else if (train.arvlMsg2.includes("도착") && 
+                           train.arvlMsg2.replace("도착", "").trim() === train.stationName) {
+                  return "도착";
+                } else if (train.arvlMsg2.includes("출발") && 
+                           train.arvlMsg2.replace("출발", "").trim() === train.stationName) {
+                  return "출발";
+                } else if (train.arvlMsg2.includes("진입") && 
+                           train.arvlMsg2.replace("진입", "").trim() === train.stationName) {
+                  return "진입";
+                } 
+                return null; // Return null if no conditions match
+              })();
+
+              return (
+                <TouchableOpacity
+                  key={`${train.stationName}-${train.lineName}-${index}`} // Make the key more unique
+                  style={styles.stationButton}
+                >
+                  <View style={styles.horizontalContainer}>
+                    {LineIcon && (
+                      <View style={styles.iconContainer}>
+                        <LineIcon />
+                      </View>
+                    )}
+                    <View style={styles.textContainer}>
+                      <Text style={styles.stationName}>{train.stationName}</Text>
+                      <Text style={styles.direction}>{train.direction}</Text>
+                      <Text
+                        style={[
+                          styles.typeOfTrain,
+                          train.typeOfTrain === "급행" && styles.expressTrainType, // Conditional style
+                        ]}
+                      >
+                        {train.typeOfTrain}
+                      </Text>
+                    </View>
+                    <View style={styles.timeContainer}>
+                      {train.arrivalTime === "0" ? (
+                        <View style={styles.arrivalTime}>
+                          {numberInBrackets && (
+                            <Text style={styles.arrivalTimeNumber}>{numberInBrackets} 역</Text>
+                          )}
+                          {numberInBrackets && <Text style={styles.arrivalTimeSuffix}>남음</Text>}
+                          {formattedMessage && (
+                            <Text style={styles.formattedArrivalMessage}>{formattedMessage}</Text>
+                          )}
+                        </View>
+                      ) : (
+                        <Text style={styles.arrivalTime}>{train.arrivalTime} 분</Text>
+                      )}
+                    </View>
+                  </View>
+                </TouchableOpacity>
+              );
+            })
+          ) // Closing for trains.length === 0
+        ) // Closing for isAfterServiceHours
+      }
         {errorMessage && <Text style={styles.errorMessage}>{errorMessage}</Text>}
       </ScrollView>
     </View>
@@ -272,6 +283,12 @@ const styles = StyleSheet.create({
     fontSize: 18,
     color: '#666666',
     textAlign: 'center',
+  },
+  serviceOverMessage: {
+    fontSize: 18,
+    color: '#666666',
+    textAlign: 'center',
+    marginVertical: 20,
   },
 });
 
