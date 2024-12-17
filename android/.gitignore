@@ -14,10 +14,3 @@ local.properties
 
 # Bundle artifacts
 *.jsbundle
-
-.env
-
-app.json
-babel.config.js
-metro.config.js
-package-lock.json
